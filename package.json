@@ -1,0 +1,18 @@
+{
+  "name": "kana_bingo",
+  "description": "Bingo for Japanese KANA characters",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nownabe/kana_bingo",
+  "author": {
+    "name": "nownabe",
+    "email": "nownabe@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nownabe/kana_bingo.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "react-tools": "~0.13.3"  
+  }
+}
