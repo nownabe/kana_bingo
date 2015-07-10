@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
+gem "leveldb"
 gem "sinatra"
-gem "haml"
-gem "sqlite3"
-gem "activerecord"
+gem "slim"
 
 group :production do
   gem "unicorn"

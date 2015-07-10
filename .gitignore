@@ -35,3 +35,4 @@ build/
 .rvmrc
 
 /node_modules
+/states.db
