@@ -1,0 +1,14 @@
+div#bingo-container {
+  td {
+    height: 20px;
+    width: 20px;
+  }
+
+  td.open {
+    background-color: blue;
+  }
+
+  td.closed {
+    background-color: gray;
+  }
+}

@@ -13,6 +13,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "react-tools": "~0.13.3"  
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.6",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglify": "^1.2.0",
+    "jquery": "^2.1.4",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
