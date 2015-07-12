@@ -13,7 +13,7 @@ div#bingo-container {
     font-size: 30px; }
   div#bingo-container td.open {
     color: #000;
-    text-shadow: 2px 2px 5px #fff;
+    text-shadow: 0px 0px 5px #fff;
     font-weight: bold; }
   div#bingo-container td.closed {
     background-color: #444444;
