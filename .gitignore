@@ -38,3 +38,5 @@ build/
 /states.db
 /.sass-cache
 /public/images/background.png*
+/log/*.log
+/tmp/*.pid
