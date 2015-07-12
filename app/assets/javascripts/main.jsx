@@ -15,15 +15,15 @@ const TableCell = React.createClass({
   },
 
   render() {
-    let styleClass;
+    let styleClass = "dummy";
     if (this.props.state != null)
       styleClass = this.props.state ? "open" : "closed";
-    else
-      styleClass = "dummy";
 
     return(
-      <td onClick={this.onClick} className={styleClass}>{this.props.char}</td>
-    )
+      <td onClick={this.onClick} className={styleClass}>
+        {this.props.char}
+      </td>
+    );
   }
 });
 
@@ -35,25 +35,17 @@ const TableRow = React.createClass({
       else
         return(<TableCell char={null} />);
     });
-    return(
-      <tr>{cells}</tr>
-    )
+    return(<tr>{cells}</tr>);
   }
 });
 
 const Table = React.createClass({
   render() {
-    let rows = [];
-    if (this.props.table)
-      rows = this.props.table.map((row) => {
-        return(<TableRow row={row} />);
-      });
+    let rows = this.props.table.map((row) => {
+      return(<TableRow row={row} />);
+    });
 
-    return(
-      <table id="kana-table">
-        {rows}
-      </table>
-    )
+    return(<table id="kana-table">{rows}</table>);
   }
 });
 
@@ -70,19 +62,14 @@ const KanaBingo = React.createClass({
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-    JSON.stringify(this.state.table.formattedTable);
   },
 
   getInitialState() {
-    return {
-      table: []
-    };
+    return({table: new KanaTable({})});
   },
 
   handleChange(event) {
-    this.setState({
-      table: event.target.value
-    });
+    this.setState({table: event.target.value});
   },
 
   componentDidMount() {
@@ -91,9 +78,7 @@ const KanaBingo = React.createClass({
   },
 
   render() {
-    return(
-      <Table table={this.state.table.formattedTable} />
-    );
+    return(<Table table={this.state.table.formattedTable} />);
   }
 });
 
