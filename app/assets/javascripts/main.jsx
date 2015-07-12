@@ -1,8 +1,10 @@
-import React from "react";
+import React from "react/addons";
 import $ from "jquery"
 
 import Endpoint from "./Endpoint"
 import KanaTable from "./KanaTable"
+
+const CSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 const TableCell = React.createClass({
   onClick(event) {
@@ -15,13 +17,22 @@ const TableCell = React.createClass({
   },
 
   render() {
-    let styleClass = "dummy";
-    if (this.props.state != null)
-      styleClass = this.props.state ? "open" : "closed";
-
+    let overlay = null;
+    if (this.props.state === false)
+      overlay = (
+        <div className="overlay" key={this.props.char}>
+          <span className="char-box">{this.props.char}</span>
+        </div>
+      );
+      
     return(
-      <td onClick={this.onClick} className={styleClass}>
-        {this.props.char}
+      <td onClick={this.onClick}>
+        <div className="base">
+          <span className="char-box">{this.props.char}</span>
+        </div>
+        <CSSTransitionGroup transitionName="overlay">
+          {overlay}
+        </CSSTransitionGroup>
       </td>
     );
   }
