@@ -94,6 +94,6 @@ const KanaBingo = React.createClass({
 });
 
 React.render(
-  <KanaBingo pollInterval={500} />,
+  <KanaBingo pollInterval={200} />,
   document.getElementById("bingo-container")
 );
