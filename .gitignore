@@ -37,3 +37,4 @@ build/
 /node_modules
 /states.db
 /.sass-cache
+/public/images/background.png*

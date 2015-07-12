@@ -10,12 +10,17 @@ const TableCell = React.createClass({
     $.ajax({
       url: Endpoint.char(this.props.char),
       type: method,
-      data: {dummy: ""}
+      data: {}
     });
   },
 
   render() {
-    let styleClass = this.props.state ? "open" : "closed";
+    let styleClass;
+    if (this.props.state != null)
+      styleClass = this.props.state ? "open" : "closed";
+    else
+      styleClass = "dummy";
+
     return(
       <td onClick={this.onClick} className={styleClass}>{this.props.char}</td>
     )

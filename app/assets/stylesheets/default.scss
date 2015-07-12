@@ -1,14 +1,28 @@
 div#bingo-container {
-  td {
-    height: 20px;
-    width: 20px;
+  background: url("/images/background.png") fixed no-repeat;
+  width: 640px;
+  height: 292px;
+
+  td.open, td.closed {
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border-radius: 5px;
+    font-size: 30px;
   }
 
   td.open {
-    background-color: blue;
+    //background-color: white;
+    color: #000;
+    text-shadow: 2px 2px 5px #fff;
+    font-weight: bold;
   }
 
   td.closed {
-    background-color: gray;
+    background-color: #444444;
+    color: #888;
   }
 }
