@@ -1,14 +1,14 @@
 import React from "react";
 import $ from "jquery"
 
-import endpoint from "./Endpoint"
+import Endpoint from "./Endpoint"
 import KanaTable from "./KanaTable"
 
 const TableCell = React.createClass({
   onClick(event) {
     let method = this.props.state ? "DELETE" : "POST";
     $.ajax({
-      url: endpoint.char(this.props.char),
+      url: Endpoint.char(this.props.char),
       type: method,
       data: {dummy: ""}
     });
@@ -55,7 +55,7 @@ const Table = React.createClass({
 const KanaBingo = React.createClass({
   getTable() {
     $.ajax({
-      url: endpoint.table(),
+      url: Endpoint.table(),
       dataType: "json",
       cache: false,
       success: (data) => {
