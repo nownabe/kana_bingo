@@ -29,6 +29,8 @@ div#bingo-container {
       z-index: 10;
       background-color: #222;
       color: #444; }
+      div#bingo-container td div.overlay:hover {
+        color: #fff; }
 
 .overlay-enter {
   -webkit-transition: 0.5s ease-in;

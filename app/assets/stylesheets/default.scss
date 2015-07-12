@@ -37,6 +37,10 @@ div#bingo-container {
       z-index: 10;
       background-color: #222;
       color: #444;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }
