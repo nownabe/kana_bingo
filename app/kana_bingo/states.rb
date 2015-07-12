@@ -11,7 +11,7 @@ module KanaBingo
 
     def close(char)
       validate_character!(char)
-      states[row(char)][char] = false
+      rows(char).each { |row| states[row][char] = false }
       save!
     end
 
@@ -25,11 +25,11 @@ module KanaBingo
 
     def open(char)
       validate_character!(char)
-      states[row(char)][char] = true
+      rows(char).each { |row| states[row][char] = true }
       save!
     end
 
-    def row(char)
+    def rows(char)
       Gojuon::DICTIONARY[char]
     end
 

@@ -22,7 +22,7 @@ module KanaBingo
 
     DICTIONARY =
       TABLE.each_with_object({}) do |(row_name, chars), dictionary|
-        chars.each { |char| dictionary[char] = row_name }
+        chars.each { |char| (dictionary[char] ||= []) << row_name }
       end
   end
 end
